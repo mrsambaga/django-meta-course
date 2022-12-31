@@ -12,7 +12,7 @@ class Drinks(models.Model):
 class Booking(models.Model):
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
-    guest_count = models.IntegerField
+    guest_count = models.IntegerField()
     reservation_time = models.DateField(auto_now=True)
     comment = models.CharField(max_length=1000)
 
