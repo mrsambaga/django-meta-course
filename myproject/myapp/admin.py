@@ -5,3 +5,4 @@ from myapp.models import *
 admin.site.register(Drinks)
 admin.site.register(DrinksCategory)
 admin.site.register(Booking)
+admin.site.register(Employees)
