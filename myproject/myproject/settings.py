@@ -55,7 +55,7 @@ ROOT_URLCONF = 'myproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -86,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',   
         'NAME': 'mydatabase',   
         'USER': 'root',   
-        'PASSWORD': 'gh ',   
+        'PASSWORD': '',   
         'HOST': '127.0.0.1',   
         'PORT': '3306',   
         'OPTIONS': {   
