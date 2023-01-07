@@ -7,8 +7,8 @@ from myapp.models import Menu
 def home(request):
     return render(request, 'home.html')
 
-def book(request):
-    return render(request, 'book.html')
+#def book(request):
+#   return render(request, 'book.html')
 
 
 def drinks(request, drink_name):
@@ -29,7 +29,7 @@ def form_view(request):
         if form.is_valid():
             form.save()
     context = {"form" : form}
-    return render(request, "booking.html", context)
+    return render(request, "book.html", context)
 
 def about(request):
     return render(request, 'about.html')
