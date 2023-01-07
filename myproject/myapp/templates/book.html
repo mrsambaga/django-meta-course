@@ -13,6 +13,7 @@
     <h2 style="color: #495E57"> Book </h2>
     <p> This is an Booking page for Little Lemon </p>
     <form action="", method="post", style="background-color: #495E57;">
+        {% csrf_token %}
         {{form.as_p}}
         <input type="submit", value="Submit">
     </form>
