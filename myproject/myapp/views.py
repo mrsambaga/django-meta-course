@@ -44,5 +44,5 @@ def display_menu_items(request, pk=None) :
         menu_item = Menu.objects.get(pk=pk)
     else :
         menu_item = ''
-    render(request, 'menu_item.html', {"menu_item" : menu_item})
+    return render(request, 'menu_item.html', {"menu_item" : menu_item})
 
