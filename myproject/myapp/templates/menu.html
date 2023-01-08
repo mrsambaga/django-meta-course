@@ -1,18 +1,23 @@
 {% extends 'base.html' %}
 {% load static %}
-
-
 {% block content %}
-<h2 style="color: #495E57"> Menu </h2>
-{% if menu %}
-    {% for item in menu %}
-        {{item.name}} : {{item.price}}
-        <br>
-    {% endfor %}
-{% else %}
-    <p>No item to display</p>
-{% endif %}
-{% endblock content %}
-
+<h1>Menu</h1>
+<div class="column">
+    {% if menu %}
+        {% for item in menu %}
+            <p>
+                <a href="{% url 'menu_item' pk=item.pk %}">
+                    {{ item.name }}
+                </a>
+                <span class="menu-price">
+                    ${{item.price}}.00
+                </span>
+            </p>
+        {% endfor %}
+    {% else %}
+        <p>No item to display</p>
+    {% endif %}
+</div>
+{% endblock %}
 
     
