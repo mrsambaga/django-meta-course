@@ -24,6 +24,11 @@ class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAdminUser])
+def AddItem(request):
+    pass
+
+@api_view(['GET', 'POST'])
+@permission_classes([IsAdminUser])
 def managers(request):
     username = request.data["username"]
     if username:
