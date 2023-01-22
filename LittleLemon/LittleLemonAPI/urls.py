@@ -3,10 +3,16 @@ from . import views
 
 urlpatterns = [
 # Add URL configuration for the path() function here
-    path('menu-items/', views.MenuItemView.as_view(), name='menu'),
-    path('menu-items/<int:pk>', views.SingleMenuItemView.as_view(), name='single-menu'),
-    path('category', views.CategoriesView.as_view(), name='category'),
-    path('groups/manager/user', views.managers),
+    path('categories', views.CategoriesView.as_view()),
+    path('menu-items', views.MenuItemsView.as_view()),
+    path('menu-items/<int:pk>', views.SingleMenuItemView.as_view()),
+    path('cart/menu-items', views.CartView.as_view()),
+    path('orders', views.OrderView.as_view()),
+    path('orders/<int:pk>', views.SingleOrderView.as_view()),
+    path('groups/manager/users', views.GroupViewSet.as_view(
+        {'get': 'list', 'post': 'create', 'delete': 'destroy'})),
+    path('groups/delivery-crew/users', views.DeliveryCrewViewSet.as_view(
+        {'get': 'list', 'post': 'create', 'delete': 'destroy'}))
 ]
 
 
