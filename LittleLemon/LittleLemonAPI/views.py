@@ -40,7 +40,7 @@ def managers(request):
         elif request.method == 'DELETE':
             managers.user_set.remove(user)
             return Response({"message" : "User deleted from manager group"})
-    elif request.method == 'GET':
+    if request.method == 'GET':
         managers = Group.objects.get(name="Manager")
         users = managers.user_set.all()
         user_list = [user.username for user in users]
