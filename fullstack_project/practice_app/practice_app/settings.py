@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'practice_app.wsgi.application'
 DATABASES = {   
     'default': {   
         'ENGINE': 'django.db.backends.mysql',   
-        'NAME': 'mydatabase',   
+        'NAME': 'menu_items',   
         'USER': 'root',   
         'PASSWORD': '',   
-        'HOST': '127.0.0.1',   
+        'HOST': '127.0.0.1',
         'PORT': '3306',     
     }   
 } 
