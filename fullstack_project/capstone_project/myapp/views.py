@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 from .models import Menu
 from django.core import serializers
-from .models import Booking
+from .models import Booking, Menu
 from datetime import datetime
 import json
 from .forms import BookingForm

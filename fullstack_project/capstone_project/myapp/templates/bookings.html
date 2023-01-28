@@ -27,9 +27,6 @@
     </div>
     <!--End row-->
 
-
-
-
   </article>
 </section>
 
@@ -37,6 +34,7 @@
 <script>
   const bookings = JSON.parse('{{ bookings|safe }}');
   pretty_json = JSON.stringify(bookings, null, 2);
+  document.getElementById("bookings").innerHTML = pretty_json;
 </script>
 {% endblock %}
 
